@@ -37,20 +37,20 @@ var getContentful = require('../getContentful.js');
 
 ### Options
 
-#### client:  arg for [Contentful.createClient(client)](https://contentful.github.io/contentful.js/contentful/latest/contentful.html)
-
- - accessToken: (default is process.env.CONTENTFUL_ACCESS_TOKEN)
- - space:       (default is process.env.CONTENTFUL_SPACE)
+#### client:  **required** arg for [Contentful.createClient(client)](https://contentful.github.io/contentful.js/contentful/latest/contentful.html)
+  You must provide:
+ - accessToken:
+ - space:
 
 #### query: arg for [client.getEntries(query)](https://contentful.github.io/contentful.js/contentful/latest/ContentfulClientAPI.html#.getEntries)
-default is {}.  
+Default is {}.  
 
 #### msFiles: how to manipulate and place the content into metalsmith
 
  - idField: field to use for id.  default is 'slug'.  falsy means use sys.id
  - filename: pattern to create the metalsmith "filename" based on id.  default is "posts/${id}.md"
  - postProcess(): Default is null.  If present, the content will be replaced by `postProcess(content)`.  For example, if you need to rename fields.
- - addYAML: default is {}.  Gets added to each result.  Useful if you want to add fields such a template
+ - addYAML: default is {}.  Gets added to each result.  Useful if you want to add fields such as a template
  - metadata: default is null.  If present, also place all the data into metalsmith.metadata() here.
 
 ### Notes, Todos, and Caveats

@@ -54,7 +54,6 @@ test('msFiles', function(t) {
                      query: { },
                      msFiles: {
                         idField: 'sku',
-                        filename: "foo/skus/${id}.html",
                         addYAML: { foo: "bar" },
                         postProcess: function(c) {
                            c.priceInPennies = c.price * 100;
@@ -71,7 +70,7 @@ test('msFiles', function(t) {
       //console.dir(files, { depth: 99 });
       t.equals(Object.keys(files).length, 9);
       t.equals(Object.keys(mockMetalsmith.metadata().here).length, 9)
-      var soso_wall_clock = files['foo/skus/B00MG4ULK2.html'];
+      var soso_wall_clock = files['posts/B00MG4ULK2.md'];
       t.equals(soso_wall_clock.slug, 'soso-wall-clock');
       t.equals(soso_wall_clock.priceInPennies, 12000);
       t.equals(soso_wall_clock.foo, "bar")

@@ -3,12 +3,11 @@ const contentful = require('contentful');
 module.exports = getContentful;
 
 const DEFAULT_OPTIONS = {
-   client: {
-      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      space:       process.env.CONTENTFUL_SPACE
-      // more options @see https://contentful.github.io/contentful.js/contentful/latest/contentful.html
+   client: {  // @see https://contentful.github.io/contentful.js/contentful/latest/contentful.html
+      //accessToken:,
+      //space:
    },
-   query: { },
+   query: { }, // @see https://contentful.github.io/contentful.js/contentful/latest/ContentfulClientAPI.html#.getEntries
    msFiles : {
       idField: 'slug',
       filename: "posts/${id}.md"
@@ -57,7 +56,9 @@ function getContentful(options) {
 };
 
 
-function normalize(inOptions){
-   var options = Object.assign({}, DEFAULT_OPTIONS, inOptions || { });
+function normalize(inOptions) {
+   inOptions = inOptions || {};
+   var options = Object.assign({}, DEFAULT_OPTIONS, inOptions);
+   options.msFiles = Object.assign({}, DEFAULT_OPTIONS.msFiles, inOptions.msFiles);  // deeper copy here...
    return options;
 };
