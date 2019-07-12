@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-get-contentful",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A metalsmith plugin to grab contentful files",
   "main": "getContentful.js",
   "scripts": {
@@ -20,9 +20,9 @@
     "contentful": "^6.1.0"
   },
   "devDependencies": {
-    "nyc": "^11.8.0",
-    "tape": "^4.6",
-    "coveralls": "^3.0"
+    "coveralls": "^3.0",
+    "nyc": "^14.1.1",
+    "tape": "^4.6"
   },
   "author": "Morgan Conrad <flyingspaniel@gmail.com> (http://flyingspaniel.com/)",
   "license": "MIT",
