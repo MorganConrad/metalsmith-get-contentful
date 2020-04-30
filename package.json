@@ -5,7 +5,9 @@
   "main": "getContentful.js",
   "scripts": {
     "test": "nyc --reporter=lcov tape test/test.js",
-    "coverage": "nyc --reporter=text-lcov report | coveralls"
+    "coverage": "nyc --reporter=text-lcov report | coveralls",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,8 @@
     "contentful"
   ],
   "dependencies": {
-    "contentful": "^7.13.0"
+    "contentful": "^7.13.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "coveralls": "^3.0",
@@ -29,5 +32,6 @@
   "bugs": {
     "url": "https://github.com/MorganConrad/metalsmith-get-contentful/issues"
   },
-  "homepage": "https://github.com/MorganConrad/metalsmith-get-contentful#readme"
+  "homepage": "https://github.com/MorganConrad/metalsmith-get-contentful#readme",
+  "snyk": true
 }
