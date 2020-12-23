@@ -17,7 +17,7 @@
     "contentful"
   ],
   "dependencies": {
-    "contentful": "^7.15.0"
+    "contentful": "^8.0.3"
   },
   "devDependencies": {
     "coveralls": "^3.0",
