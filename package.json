@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-get-contentful",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A metalsmith plugin to grab contentful files",
   "main": "getContentful.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "contentful"
   ],
   "dependencies": {
-    "contentful": "^9.1.29"
+    "contentful": "^10.4.0"
   },
   "devDependencies": {
     "coveralls": "^3.1.1",
